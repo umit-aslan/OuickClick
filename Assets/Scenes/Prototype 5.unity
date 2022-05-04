@@ -388,6 +388,7 @@ MonoBehaviour:
   - {fileID: 5284065289990531861, guid: 754bf20f2ecf9ae43a1a8dc2db6d259d, type: 3}
   - {fileID: 6842651399663609145, guid: 5212af4b44954e04fb71f8b1e08819bd, type: 3}
   - {fileID: 4899457925197213974, guid: 90f2f69c5539bc84b8bb35457bf2b765, type: 3}
+  objectController: {fileID: 1611319335}
 --- !u!1 &1043111703
 GameObject:
   m_ObjectHideFlags: 0
@@ -483,6 +484,7 @@ GameObject:
   - component: {fileID: 1611319333}
   - component: {fileID: 1611319332}
   - component: {fileID: 1611319331}
+  - component: {fileID: 1611319335}
   m_Layer: 0
   m_Name: Sensor
   m_TagString: Untagged
@@ -561,13 +563,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1611319330}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -10, z: 0}
+  m_LocalPosition: {x: 0, y: -4.6, z: 0}
   m_LocalScale: {x: 3, y: 1, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1611319335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1611319330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b9880481642bb640ab9f7304803b503, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1829648827
 GameObject:
   m_ObjectHideFlags: 0
