@@ -20,10 +20,8 @@ public class Game_Manager : MonoBehaviour
 
     IEnumerator Spawn()
     {
-        while (true)
+        while (!gameOver)
         {
-            if (gameOver==false)
-            {
                 yield return new WaitForSeconds(1);
                 int random = Random.Range(0, targets.Length);
                 Instantiate(targets[random], transform.position, Quaternion.identity);
@@ -32,7 +30,6 @@ public class Game_Manager : MonoBehaviour
                     gameOver = true;
                     gameOverPanel.SetActive(true);
                 }
-            }
         }
     }
     public void restartGame()
