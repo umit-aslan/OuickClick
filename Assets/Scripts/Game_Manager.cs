@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class Game_Manager : MonoBehaviour
 {
-    // Start is called before the first frame update
+  [SerializeField]
+  GameObject[] targets;
     void Start()
+    {
+        StartCoroutine(Spawn());
+    }
+
+ 
+    void Update()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator Spawn()
     {
-        
+        while (true)
+        {
+            yield return new WaitForSeconds(1);
+            int random = Random.Range(0, targets.Length);
+            Instantiate(targets[random], transform.position, Quaternion.identity);
+        }
     }
 }
