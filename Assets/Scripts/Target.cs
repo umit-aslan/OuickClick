@@ -18,9 +18,8 @@ public class Target : MonoBehaviour
         rb.AddTorque(Random.Range(-1,1), Random.Range(-1,1), Random.Range(-1,1), ForceMode.Impulse);
     }
 
-
-    void Update()
+    private void OnMouseDown()
     {
-        
+        Destroy(gameObject);
     }
 }
