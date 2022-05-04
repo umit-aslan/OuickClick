@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4893345460044519028}
   - component: {fileID: 4868256320402340304}
   - component: {fileID: 4876176643647114510}
+  - component: {fileID: -4903242451460283565}
   m_Layer: 0
   m_Name: Skull
   m_TagString: Untagged
@@ -83,3 +84,15 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &-4903242451460283565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4899457925197213974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14176761c67530845972dfab5b800c4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
