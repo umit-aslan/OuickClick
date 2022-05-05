@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 [RequireComponent(typeof(Rigidbody), typeof(BoxCollider))]
@@ -9,10 +10,12 @@ public class Target : MonoBehaviour
     Rigidbody rb;
     [SerializeField]
     ParticleSystem[] explosion;
+
+    Game_Manager gameManager;
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
-
+        gameManager=FindObjectOfType<Game_Manager>();
     }
     void Start()
     {
@@ -25,5 +28,15 @@ public class Target : MonoBehaviour
     {
         Instantiate(explosion[Random.Range(0,9)], transform.position, Quaternion.identity);
         Destroy(gameObject);
+        if (gameObject.tag == "Good")
+        {
+           gameManager.score+=100;
+           gameManager.scoreText.GetComponent<Text>().text = "Score: " + gameManager.score;
+        } 
+        else if (gameObject.tag == "Bad")
+        {
+            gameManager.score-=100;
+            gameManager.scoreText.GetComponent<Text>().text = "Score: " + gameManager.score;
+        }
     }
 }
