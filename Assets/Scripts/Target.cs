@@ -11,14 +11,15 @@ public class Target : MonoBehaviour
     [SerializeField]
     ParticleSystem[] explosion;//particle system for explosion
 
-    audioSource audioSource;
     Game_Manager gameManager;//Game_Manager script
+
+    
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();//get rigidbody
         gameManager=FindObjectOfType<Game_Manager>();//get Game_Manager script
-        audioSource = GetComponent<AudioSource>();//get audioSource
     }
+    
     void Start()
     {
         transform.position = new Vector3(Random.Range(-2.30f, 2.30f), 0, 0);//set random position
@@ -29,6 +30,7 @@ public class Target : MonoBehaviour
     private void OnMouseDown()//when mouse is down
     {
         Instantiate(explosion[Random.Range(0,9)], transform.position, Quaternion.identity);//instantiate explosion
+        gameManager.audioSource.Play();//play audio
         Destroy(gameObject);//destroy gameObject
         if (gameObject.tag == "Good")//if gameObject is good
         {

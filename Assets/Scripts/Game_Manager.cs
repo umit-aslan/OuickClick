@@ -12,10 +12,13 @@ public class Game_Manager : MonoBehaviour
 
     public int score=0;
     public GameObject scoreText;
+
+    public AudioSource audioSource;
     void Start()
     {
         StartCoroutine(Spawn());//start coroutine
         scoreText = GameObject.FindGameObjectWithTag("textScore");//get score text
+        audioSource = GetComponent<AudioSource>();//get audio source
     }
     IEnumerator Spawn()//spawn coroutine
     {
