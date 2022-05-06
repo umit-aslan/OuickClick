@@ -5,11 +5,11 @@ using UnityEngine;
 public class ObjectController : MonoBehaviour
 {
    public int counter=0;
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)//when object enters collider
     {
-        if (other.gameObject.tag=="Good")
+        if (other.gameObject.tag=="Good")//if object is good
         {
-            counter++;
+            counter++;//add 1 to counter
         }    
     }
 }
